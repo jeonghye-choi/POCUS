@@ -8,4 +8,6 @@
     <string name="keyword2">KEYWORD2</string>
     <string name="pocus">POCUS</string>
     <string name="addKeyword">+ 새 키워드 추가하기</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

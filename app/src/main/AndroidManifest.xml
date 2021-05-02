@@ -9,6 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pocus">
+        <service
+            android:name=".MyRemoteViewsService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <receiver android:name=".NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver> <!-- 이렇게 매니페스트파일에 위젯을 알려주는 코드가 추가된 것을 확인가능 -->
+        <!-- 위젯에는 인텐트필터가 APPWIDGET_UPDATE 주기로 실행될 것임을 나타낸다 -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
