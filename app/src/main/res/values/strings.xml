@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pocus</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="keyword3">KEYWORD3</string>
+    <string name="keyword1">KEYWORD1</string>
+    <string name="keyword2">KEYWORD2</string>
+    <string name="pocus">POCUS</string>
+    <string name="addKeyword">+ 새 키워드 추가하기</string>
+</resources>
