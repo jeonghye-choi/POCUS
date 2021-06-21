@@ -38,7 +38,7 @@ public class SendsmsActivitytest extends AppCompatActivity {
                 boolean success = jsonObject.getBoolean("success");
                 if (success) {
                     Toast.makeText(getApplicationContext(), "sms업로드 성공", Toast.LENGTH_SHORT).show();
-                    /*Intent intent1 = new Intent(SendsmsActivitytest.this, SendsmsActivitytest.class);
+                    /*Intent intent1 = new Intent(SendsmsActivitytest.this, NewAppWidget.class);
                     startActivity(intent1);*/
                 } else {
                     Toast.makeText(getApplicationContext(), "sms업로드 실패", Toast.LENGTH_SHORT).show();
