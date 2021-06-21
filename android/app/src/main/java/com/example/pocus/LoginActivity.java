@@ -1,4 +1,4 @@
-package com.example.pocus_0509db;
+package com.example.pocus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                         String userID1 = jsonObject.getString("userID");
                         String userPass1 = jsonObject.getString("userPassword");
                         Toast.makeText(getApplicationContext(), "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, ShowKey.class);
                         intent.putExtra("userID", userID1);
                         intent.putExtra("userPass", userPass1);
                         startActivity(intent);

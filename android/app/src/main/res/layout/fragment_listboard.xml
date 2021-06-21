@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/pocus"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addKeywordBotton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/addKeyword"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#A0D468" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/keyword1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_rectangle_shadow"
+            android:text="@string/keyword1"
+            android:textColor="#8CC152"
+            app:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/keyword2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_rectangle_shadow"
+            android:text="@string/keyword2"
+            android:textColor="#8CC152"
+            app:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/keyword3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_rectangle_shadow"
+            android:text="@string/keyword3"
+            android:textColor="#8CC152"
+            app:backgroundTint="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.pocus_0509db;
+package com.example.pocus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +21,7 @@ public class KeywordActivity extends AppCompatActivity {
 
     private EditText et_key;
     private Button btn_key;
+    private Button btn_seedata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class KeywordActivity extends AppCompatActivity {
 
         et_key = findViewById(R.id.et_key);
         btn_key = findViewById(R.id.btn_key);
+        btn_seedata = findViewById(R.id.btn_seedata);
 
         btn_key.setOnClickListener(v -> {
             String userKey = et_key.getText().toString();
@@ -39,7 +41,7 @@ public class KeywordActivity extends AppCompatActivity {
                     boolean success = jsonObject.getBoolean("success");
                     if (success) {
                         Toast.makeText(getApplicationContext(), "키워드 등록이 완료 되었습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(KeywordActivity.this, ShowKey.class);
+                        Intent intent = new Intent(KeywordActivity.this, KeywordActivity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "키워드 등록에 실패했습니다.", Toast.LENGTH_SHORT).show();
@@ -52,6 +54,14 @@ public class KeywordActivity extends AppCompatActivity {
             AddKeyRequest addKeyRequest = new AddKeyRequest(userKey, responseListener);
             RequestQueue queue = Volley.newRequestQueue(KeywordActivity.this);
             queue.add(addKeyRequest);
+        });
+
+        btn_seedata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KeywordActivity.this, ShowData.class);
+                startActivity(intent);
+            }
         });
     }
 }

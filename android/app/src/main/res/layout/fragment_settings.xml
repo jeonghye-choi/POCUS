@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/pocus"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/grass_200"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addKeywordBotton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="383dp"
+            android:layout_height="60dp"
+            android:text="로그인하세요"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#A0D468" />
+
+        <TextView
+            android:id="@+id/arrowPoint1"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text=">"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
