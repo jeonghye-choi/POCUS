@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "POCUS_Server"
+rootProject.name = "POCUS_0509DB"

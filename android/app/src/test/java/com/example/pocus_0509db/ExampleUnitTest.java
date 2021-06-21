@@ -1,4 +1,4 @@
-package com.example.pocus_server;
+package com.example.pocus_0509db;
 
 import org.junit.Test;
 
