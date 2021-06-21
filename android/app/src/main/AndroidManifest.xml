@@ -15,10 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pocus"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ShowData"></activity>
+        <activity android:name=".SendsmsActivitytest"></activity>
+        <activity android:name=".ShowData" />
         <activity android:name=".ShowKey" />
         <activity android:name=".KeywordActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
 
         <service
             android:name=".MyRemoteViewsService"
@@ -34,15 +35,6 @@
             android:exported="true"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
-        <receiver android:name=".NewAppWidget">
-            <intent-filter android:priority="9000">
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/new_app_widget_info" />
-        </receiver>
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
@@ -51,6 +43,18 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name=".NewAppWidget">
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListAdapter;
@@ -28,6 +29,7 @@ public class ShowData extends AppCompatActivity {
 
     private Button btn_returnkeypage;
 
+    private static final String TAG = "ShowData";
     String myJSON;
 
     private static final String TAG_RESULTS = "result";
@@ -67,6 +69,9 @@ public class ShowData extends AppCompatActivity {
             for(int i = 0; i<data.length();i++){
                 JSONObject c = data.getJSONObject(i);
                 String userKEY = c.getString((TAG_KEY));
+                System.out.print(i);
+
+                Log.d(TAG,"keyword => " + userKEY);
 
                 HashMap<String,String> data = new HashMap<>();
 

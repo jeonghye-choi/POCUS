@@ -1,91 +1,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:minHeight="200dp"
+    android:minWidth="100dp"
     android:background="#ffffff"
     android:orientation="vertical"
     android:padding="@dimen/widget_margin"
     android:theme="@style/ThemeOverlay.Pocus.AppWidgetContainer">
 
-        <!--            android:gravity="left|center"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/widget_test_textview"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:layout_marginTop="10dp"
+            android:background="#A9EC5D"
+            android:text=" KEYWORD \n SMS \n 안전재난문자"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ListView
+            android:id="@+id/new_app_widget"
+            android:layout_width="411dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:orientation="vertical"
-            android:padding="@dimen/widget_margin"
-            android:theme="@style/ThemeOverlay.Pocus.AppWidgetContainer">
-
-                <TextView
-                    android:id="@+id/widget_test_textview"
-                    android:layout_width="411dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#AFEC68"
-                    android:text=" KEYWORD \n SMS"
-                    android:textColor="@color/black"
-                    android:textSize="12dp" />
-
-                <!--            android:gravity="left|center"-->
-                <!--            android:textSize="12sp"-->
-                <!--            android:textStyle="bold"-->
-
-                <ListView
-                    android:id="@+id/new_app_widget"
-                    android:layout_width="411dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:background="@color/grass_200"
-                    android:backgroundTint="#FFFFFF"
-                    android:cacheColorHint="#FFFFFF"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:orientation="vertical"
-            android:padding="@dimen/widget_margin"
-            android:theme="@style/ThemeOverlay.Pocus.AppWidgetContainer">
-
-                <TextView
-                    android:id="@+id/widget_test_textview_1"
-                    android:layout_width="411dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_margin="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#AFEC68"
-                    android:text=" 안전재난문자"
-                    android:textColor="@color/black"
-                    android:textSize="12dp" />
-
-                <!--            android:gravity="left|center"-->
-                <!--            android:textSize="12sp"-->
-                <!--            android:textStyle="bold"-->
-
-                <ListView
-                    android:id="@+id/new_app_widget_1"
-                    android:layout_width="411dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:background="@color/grass_200"
-                    android:backgroundTint="#FFFFFF"
-                    android:cacheColorHint="#FFFFFF"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-        </LinearLayout>
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/grass_200"
+            android:backgroundTint="#FFFFFF"
+            android:cacheColorHint="#FFFFFF"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
 </LinearLayout>
