@@ -1,8 +1,9 @@
 from rest_framework import serializers
 
+from .models import User
 
-class UserSerializer(serializers.Serializer):
-    user_id = serializers.CharField()
-    user_pw = serializers.CharField()
-    user_name = serializers.CharField()
-    user_stuid = serializers.CharField()
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = "__all__"
