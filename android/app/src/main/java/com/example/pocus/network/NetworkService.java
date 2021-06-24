@@ -32,4 +32,20 @@ public interface NetworkService {
 
     @GET("/keywords/{pk}")
     Call<Keyword> get_pk_keyword(@Path("") int pk);
+
+    // messages api interface
+    @POST("/messages/")
+    Call<Message> post_message(@Body Message message);
+
+    @PATCH("/messages/{pk}")
+    Call<Message> patch_message(@Path("") int pk, @Body Message message);
+
+    @DELETE("/messages/{pk}")
+    Call<Message> delete_message(@Path("") int pk);
+
+    @GET("/messages/")
+    Call<List<Message>> get_message();
+
+    @GET("/messages/{pk}")
+    Call<Message> get_pk_message(@Path("") int pk);
 }
