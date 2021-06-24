@@ -2,8 +2,9 @@ package com.example.pocus.network;
 
 import android.app.Application;
 import android.util.Log;
-import retrofit.Retrofit;
-import retrofit.converter.gson.GsonConverterFactory;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ApplicationController extends Application {
