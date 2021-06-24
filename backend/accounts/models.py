@@ -39,7 +39,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(unique=True, max_length=16)
-    password = models.CharField(max_length=32)
+    password = models.CharField(max_length=255)
     user_name = models.CharField(max_length=16)
     user_stuid = models.CharField(max_length=9)
     is_staff = models.BooleanField(
