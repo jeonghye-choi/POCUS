@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   mariadb:
@@ -14,14 +14,14 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - '13306:3306'
     networks:
       - bridge
 
   adminer:
     image: adminer
     ports:
-      - "8080:8080"
+      - '8080:8080'
     networks:
       - bridge
 
