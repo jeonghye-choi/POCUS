@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  mariadb:
+    build:
+      context: ./docker/mariadb
+      args:
+        - TZ=Etc/UTC
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=development
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+    volumes:
+      - mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - bridge
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - bridge
+
+volumes:
+  mariadb:
+
+networks:
+  bridge:
