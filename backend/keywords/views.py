@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.serializers import SerializerMetaclass
@@ -6,10 +7,10 @@ from rest_framework.serializers import SerializerMetaclass
 from .models import Keyword
 from .serializers import KeywordSerializer
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def keyword_create(request):
     '''
-    GET /api/v1/keywords
+    GET /keywords/
     '''
     if request.method == 'GET':
         # 1. 디비에 있는 모든 keywords를 가져온다.
@@ -19,3 +20,12 @@ def keyword_create(request):
         serializer = KeywordSerializer(keywords, many=True)
         
         return Response(data=serializer.data)
+
+    '''
+    POST /keywords/
+    '''
+    if request.method == 'POST':
+        serializer = KeywordSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(data=serializer.data, status=status.HTTP_201_CREATED)
