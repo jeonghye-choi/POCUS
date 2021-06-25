@@ -3,6 +3,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.serializers import SerializerMetaclass
+from django.shortcuts import render, get_object_or_404
 
 from .models import Keyword
 from .serializers import KeywordSerializer
@@ -29,3 +30,19 @@ def keyword_create(request):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(data=serializer.data, status=status.HTTP_201_CREATED)
+
+@api_view(['GET','DELETE'])
+def keyword_delete(request, keyword_pk):
+    keyword = get_object_or_404(Keyword, pk=keyword_pk)
+    '''
+    GET /keyword/{keyword_pk}
+    DELETE /keyword/{keyword_pk}
+    '''
+    if request.method == 'GET':
+        serializer = KeywordSerializer(keyword)  #JSON으로 만들기
+        return Response(serializer.data)
+    
+    elif request.method == 'DELETE':
+        keyword.delete()
+        data = {'keyword' : keyword_pk}
+        return Response(data, status=status.HTTP_204_NO_CONTENT)
