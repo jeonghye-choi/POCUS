@@ -1,5 +1,10 @@
 # Pocus
 
+[![Android](https://img.shields.io/static/v1?style=flat-square&label=&message=Android&labelColor=212121&color=3DDC84&logoColor=3DDC84&logo=android)](https://developer.android.com/?hl=ko)
+[![Django](https://img.shields.io/static/v1?style=flat-square&label=&message=Django&labelColor=e0e0e0&color=092E20&logoColor=092E20&logo=django)](https://www.djangoproject.com/)
+[![MariaDB](https://img.shields.io/static/v1?style=flat-square&label=&message=MariaDB&labelColor=e0e0e0&color=003545&logoColor=003545&logo=mariadb)](https://mariadb.org/)
+[![Docker](https://img.shields.io/static/v1?style=flat-square&label=&message=Docker&labelColor=212121&color=2496ED&logoColor=2496ED&logo=docker)](https://www.docker.com/)
+
 소프트웨어 시스템 설계 실험 팀프로젝트
 
 **문자 골라보기**
