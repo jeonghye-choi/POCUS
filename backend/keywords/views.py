@@ -35,14 +35,14 @@ def keyword_create(request):
 def keyword_delete(request, keyword_pk):
     keyword = get_object_or_404(Keyword, pk=keyword_pk)
     '''
-    GET /keyword/{keyword_pk}
-    DELETE /keyword/{keyword_pk}
+    GET /keywords/{keyword_pk}
+    DELETE /keywords/{keyword_pk}
     '''
     if request.method == 'GET':
         serializer = KeywordSerializer(keyword)  #JSON으로 만들기
         return Response(serializer.data)
     
-    elif request.method == 'DELETE':
+    if request.method == 'DELETE':
         keyword.delete()
-        data = {'keyword' : keyword_pk}
+        data = {'id' : keyword_pk}
         return Response(data, status=status.HTTP_204_NO_CONTENT)
