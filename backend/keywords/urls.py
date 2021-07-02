@@ -5,4 +5,5 @@ app_name = 'keywords'
 
 urlpatterns = [
     path('', views.keyword_create),
+    path('<int:keyword_pk>', views.keyword_delete)
 ]
