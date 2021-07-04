@@ -14,6 +14,10 @@ import retrofit2.http.POST;
 //import retrofit2.http.Part;
 import retrofit2.http.Path;
 
+Retrofit retrofit = new Retrofit.Builder()
+    .baseURL("http://127.0.0.1:8000/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build();
 public interface NetworkService {
     // keywords api interface
     @POST("/keywords/")
